@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+    color: black;
+    padding: 5px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.marquee {
+    width: 100%;
+    white-space: nowrap; /* Agar teks tidak pindah ke baris baru */
+    overflow: hidden; /* Teks yang melampaui lebar akan tersembunyi */
+    border: 1px solid black; /* Batas untuk melihat jelas elemen marquee */
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    animation: changecolor 1s linear infinite;
+  }
+
+  .changing-bg {
+    width: auto;
+    height: auto;
+    animation: changeBackground 1s linear infinite;
+  }
+
+  @keyframes changeBackground {
+    0%, 100% {
+      color: black; /* Warna awal */
+    }
+    25% {
+      color: white; /* Warna kedua */
+    }
+    50% {
+      color: black; /* Warna ketiga */
+    }
+    75% {
+      color: white; /* Warna keempat */
+    }
+  }
+
+
+  @keyframes changecolor {
+    0%, 100% {
+      background-color: #ff0000; /* Warna awal */
+    }
+    25% {
+      background-color: #00ff00; /* Warna kedua */
+    }
+    50% {
+      background-color: #0000ff; /* Warna ketiga */
+    }
+    75% {
+      background-color: #ffff00; /* Warna keempat */
+    }
+  }
+
+table {
+    border-collapse: collapse;
+    width: 450px;
+    margin: auto;
+    background-color: violet;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+th, td {
+    padding: 7px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: paleturquoise;
+}

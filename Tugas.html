@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tugas.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="Logo">KepoDev <span class="rotating-text">Company</span></a>
+        <nav class="navbar">
+            <a href="index.html" class="navv">Home</a>
+            <a href="About.html" class="navv">About</a>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="Tugas.html" class="navv">Biodata</a></button>
+                <div class="dropdown-content">
+                    <a href="bio1.html">Andra</a>
+                    <a href="bio3.html">Reyno</a>
+                    <a href="bio2.html">Amerie</a>
+                    <a href="bio4.html">Rico</a>
+                </div>
+            </div>
+            <a href="rumah.html" class="navv">JB Rumah</a>
+            <a href="#" class="navv">Contact</a>
+        </nav>        
+    </header>
+    
+    <div class="centering">
+    <h1>Tugas Biodata</h1>
+
+    <table>
+        <tr>
+        <th>Nama :</th>
+        <td>M Riandra Rai Kurniawan Syah</td>
+        </tr>
+        <tr>
+        <th>More Info :</th>
+        <td> <a href ="bio1.html"> Click Here For Happines..........</a></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+        <th>Nama :</th>
+        <td>Amerie Novia Rianty</td>
+        </tr>
+        <tr>
+        <th>More Info :</th>
+        <td> <a href ="bio2.html"> Click Here For Happines..........</a></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+        <th>Nama :</th>
+        <td>Reyno Zulyen Adam</td>
+        </tr>
+        <tr>
+        <th>More Info :</th>
+        <td> <a href ="bio3.html"> Click Here For Happines..........</a></td>
+         </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+        <th>Nama :</th>
+        <td>M Rico</td>
+        </tr>
+        <tr>
+        <th>More Info :</th>
+        <td> <a href ="bio4.html"> Click Here For Happines..........</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const rotatingText = document.querySelector(".rotating-text");
+    const phrases = ["Company", "Production", "Property", "CoPo"];
+
+    let currentIndex = 0;
+
+    function changeText() {
+        rotatingText.textContent = phrases[currentIndex];
+        currentIndex = (currentIndex + 1) % phrases.length;
+    }
+
+    setInterval(function () {
+        rotatingText.classList.remove("show");
+        setTimeout(changeText, 500); // Change text after fade out
+        setTimeout(function () {
+            rotatingText.classList.add("show");
+        }, 600); // Fade in the new text
+    }, 2000); // Change text every 2 seconds
+});
+</script>
+</html>

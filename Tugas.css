@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    background: url('8005817.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.centering{
+    padding: 5%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.Logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar .navv{
+    position: relative;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 19px;
+}
+
+.navbar .navv::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .1s;
+}
+
+.navbar .navv:hover::before{
+    width: 100%;
+}
+
+/* Tambahkan gaya untuk dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: none;
+    width: 100px; /* Sesuaikan lebar sesuai kontennya */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 50%; /* Pusatkan dropdown horizontal */
+    transform: translateX(-50%); /* Pusatkan dropdown horizontal */
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Tampilkan dropdown saat mouse hover pada dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 450px;
+    margin: auto;
+    background-color: violet;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+a:hover{
+    font-size: larger;
+}
+th, td {
+    padding: 7px;
+    margin-left: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: paleturquoise;
+}
+h1 {
+    text-align: center;
+    font-family: Arial;
+    color: White;
+    padding: 5px;
+
+}
+ a{
+    text-decoration: none;
+    color: black;
+ }
+
+ .rotating-text {
+    display: inline-block;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Start with opacity set to 0 to hide the text */
+}
+
+/* Define CSS rules to toggle the text and fade it in */
+.rotating-text.show {
+    opacity: 1;
+}
